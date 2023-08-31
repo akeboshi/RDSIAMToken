@@ -15,8 +15,8 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
-        go-version: 'stable'
-        cache-dependency-path: go.sum
+        go-version-file: go.mod
+        cache: true
 
     - name: Run GoReleaser
       uses: goreleaser/goreleaser-action@v4
